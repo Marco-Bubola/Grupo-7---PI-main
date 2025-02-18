@@ -1,0 +1,639 @@
+/* Definição de Variáveis CSS */
+:root {
+  --primary-color: #ff0000; /* Vermelho */
+  --primary-hover: #b30000; /* Vermelho escuro para hover */
+  --secondary-color: #AE0C0D; /* Outro tom de vermelho */
+  --success-color: #28a745; /* Verde */
+  --danger-color: #dc3545; /* Vermelho para erros */
+  --info-color: #17a2b8; /* Azul para informações */
+  --dark-color: #000000; /* Preto */
+  --light-color: #f4f4f4; /* Cinza claro */
+  --text-color: #333333; /* Cor do texto */
+  --text-secondary: #555555; /* Texto secundário */
+  --background-color: #fff; /* Fundo branco */
+  --border-color: #ddd; /* Cor das bordas */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--light-color);
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+/* Container principal */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+/* Botão de Filtro */
+.btn-filtro {
+  display: block;
+  margin: 0 auto 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.btn-filtro:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Modal de Filtro */
+.filter-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.filter-modal-content {
+  background-color: var(--background-color);
+  margin: 10% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.filter-close {
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.filter-close:hover {
+  color: var(--text-color);
+}
+
+.filter-modal-content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filter-modal-content form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: var(--text-secondary);
+}
+
+.filter-modal-content form input,
+.filter-modal-content form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Lista de Registros */
+.teacher-list {
+  list-style: none;
+  padding: 0;
+}
+
+.teacher {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.teacher:hover {
+  transform: scale(1.02);
+}
+
+/* Estilização da Tabela na Seção Teacher Info */
+.teacher-info {
+  margin: 20px 0;
+}
+
+.teacher-info h2 {
+  color: var(--primary-color);
+  margin: 15px 0;
+  text-align: center;
+  font-size: 1.4em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.teacher-info table {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #f9f9f9;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+
+.teacher-info th {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 15px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.teacher-info th:hover {
+  background-color: var(--primary-hover);
+  transform: scale(1.05);
+}
+
+.teacher-info td {
+  padding: 10px 15px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.teacher-info tr:last-child td {
+  border-bottom: none;
+}
+
+.teacher-info tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.teacher-info tbody tr:hover {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+/* Contêiner de Ações e Status */
+.teacher-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 30%;
+  flex-direction: column;
+}
+
+/* Status */
+.status {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 3px;
+  display: inline-block;
+  text-align: center;
+  order: -1;
+  min-width: 150px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.status:hover{
+  transform: scale(1.044);
+}
+
+.status.deferido {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.status.indeferido {
+  background-color: var(--danger-color);
+  color: white;
+  font-size: 1rem;
+}
+
+.status.proposta-enviada {
+  background-color: #000000; 
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* Motivo de Indeferimento */
+.motivo-indeferimento {
+  font-size: 1.2rem;
+  color: var(--danger-color);
+  margin-top: 10px;
+  border-left: 4px solid var(--danger-color);
+  padding-left: 10px;
+  width: 100%;
+}
+
+/* Ações e Status - Botões */
+.details-btn,
+.pdf-btn,
+.btn-editar,
+.btn-editar-reposicao,
+.btn-desativado {
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: fit-content;
+  font-size: 16px;
+}
+
+/* Botões de Detalhes */
+.details-btn {
+  background-color: #AE0C0D; /* Substituído de #ff0000 */
+}
+
+.details-btn:hover {
+  transform: scale(1.04);
+  background-color: #b30000; /* Mantido conforme hover */
+}
+
+/* Botões de Edição */
+.btn-editar,
+.btn-editar-reposicao {
+  background-color: #000; /* Alterado de #17a2b8 para preto */
+}
+
+.btn-editar:hover,
+.btn-editar-reposicao:hover {
+  transform: scale(1.04);transform: scale(1.02);
+  background-color: #333; /* Alterado de #138496 para um tom mais claro de preto */
+}
+.pdf-btn:hover{
+  transform: scale(1.044);
+}
+/* Botão Desativado */
+.btn-desativado {
+  background-color: #6c757d;
+  color: white;
+  cursor: not-allowed;
+}
+
+
+/* Botões personalizados */
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.buttons-container .pdf-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.buttons-container .pdf-btn i {
+  color: var(--primary-color);
+  font-size: 3rem;
+  text-align: center;
+}
+
+.buttons-container .details-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Modal do PDF */
+.pdf-modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pdf-modal-content {
+  position: relative;
+  background-color: var(--background-color);
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  height: 90%;
+  top: 5%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.pdf-close {
+  color: #aaa;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.pdf-close:hover,
+.pdf-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Footer */
+.containerf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 122px;
+  width: 100%;
+  background-color: var(--dark-color);
+}
+
+.containerf a img {
+  max-height: 100px;
+}
+
+/* Estilo exclusivo para o botão VOLTAR */
+.btn-voltar {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.btn-voltar:hover {
+  background-color: var(--primary-hover);
+  transform: scale(1.05);
+}
+
+/* Bem-vindo Nome */
+.bem-vindo-nome {
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-color);
+  text-transform: capitalize;
+  font-family: Arial, sans-serif;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Estilos adicionais */
+.left-header {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Estilo para inputs com hover e foco */
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="time"],
+input[type="month"],
+input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 15px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #080808;
+  background-color: var(--background-color);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:hover,
+input[type="date"]:hover,
+input[type="number"]:hover,
+input[type="time"]:hover,
+input[type="month"]:hover,
+input[type="file"]:hover,
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+input[type="time"]:focus,
+input[type="month"]:focus,
+input[type="file"]:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+  outline: none;
+}
+
+/* Estilo para radio buttons */
+input[type="radio"] {
+  accent-color: var(--primary-color);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+input[type="radio"]:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+input[type="radio"]:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+/* Hover para botões */
+.btn-enviar {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-enviar:hover {
+  background-color: var(--primary-hover);
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.5);
+}
+
+/* Hover para a tabela */
+.teacher-info th:hover {
+  background-color: var(--primary-hover);
+  transform: scale(1.05);
+}
+
+.teacher-info td:hover {
+  background-color: rgba(255, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+/* Hover para o footer */
+.footer {
+  background-color: var(--dark-color);
+  color: var(--primary-color);
+  text-align: center;
+  padding: 15px 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+fieldset:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-color);
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+  .btn-voltar {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .teacher-info {
+    width: 100%;
+    max-width: none;
+  }
+
+  .teacher-actions {
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    flex-direction: column;
+  }
+
+  .status {
+    width: 100%;
+    min-width: 150px;
+    margin-bottom: 10px;
+  }
+  .status:hover{
+    transform: scale(1.044);
+  }
+
+  .teacher-info table, 
+  .teacher-info thead, 
+  .teacher-info tbody, 
+  .teacher-info th, 
+  .teacher-info td, 
+  .teacher-info tr { 
+    display: block; 
+  }
+
+  .teacher-info thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .teacher-info tr {
+    margin-bottom: 1rem;
+  }
+
+  .teacher-info td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+  }
+
+  .teacher-info td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+}
+/* Arquivo: faltas.css */
+
+/* Centraliza a tabela horizontalmente */
+table {
+  width: 97%;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  border-collapse: collapse; /* Opcional: remove espaços entre bordas */
+}
+
+/* Responsividade: ajusta a tabela em telas menores */
+@media screen and (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  
+  table {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  table tr {
+    margin-bottom: 15px;
+  }
+
+  table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}

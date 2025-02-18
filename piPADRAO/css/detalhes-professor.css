@@ -1,0 +1,521 @@
+/* Reset de margens e paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Importando fontes do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
+/* Estilo básico do body */
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f4f7fb;
+  color: #333;
+}
+
+/* Container principal */
+.container {
+  width: 100%;
+  padding: 0;
+}
+
+/* Cabeçalho */
+.container-sc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+}
+
+.container-sc img {
+  height: 50px;
+}
+
+.container-sc .title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.container-sc .third-column-sc {
+  display: flex;
+  align-items: center;
+}
+
+.container-sc .bem-vindo-nome p {
+  margin-left: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Título principal */
+h1 {
+  font-size: 32px;
+  color: #2c3e50;
+  margin: 20px 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Flex container */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Seções esquerda e direita */
+.left-section,
+.right-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  font-size: 24px;
+  color: #34495e;
+  margin-bottom: 15px;
+  border-left: 4px solid #db3434;
+  padding-left: 10px;
+  font-weight: 600;
+}
+
+.section p {
+  font-size: 15px;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.section p strong {
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+/* Tabelas de informação */
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-table td {
+  padding: 12px 14px; /* Espaçamento interno maior */
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+  font-family: 'Arial', sans-serif; /* Escolha de fonte simples e limpa */
+  color: #222; /* Contraste mais forte */
+  text-align: left;
+  line-height: 1.6; /* Maior espaçamento entre linhas para facilitar leitura */
+}
+
+.info-table td:first-child {
+  width: 40%;
+  font-weight: bold;
+  background-color: #f4f4f4;
+  color: #333; /* Contraste mais forte com fundo */
+  border-right: 1px solid #dcdcdc; /* Divisão clara entre colunas */
+}
+
+.info-table td:last-child {
+  width: 60%;
+  color: #444; /* Texto ligeiramente mais escuro */
+}
+
+.info-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Estilo alternado para linhas */
+.info-table tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.info-table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.info-table tr:hover {
+  background-color: #eaeaea; /* Destaque mais forte ao passar o mouse */
+}
+
+/* Títulos e cabeçalhos */
+.info-table th {
+  padding: 14px 16px;
+  background-color: #4CAF50; /* Cor de destaque */
+  color: white;
+  text-align: left;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Ajustes para telas menores */
+@media screen and (max-width: 768px) {
+  .info-table td {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+/* Estilo do PDF */
+.pdf-container {
+  margin-top: 20px;
+}
+
+.pdf-container embed {
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+
+/* Estilo da tabela */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  
+}
+
+.styled-table thead tr {
+  background-color: #b92929;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 5px 8px;
+  border: 1px solid #ddd;
+  font-size: 13px;
+  text-align: center;
+}
+
+.styled-table tbody tr {
+  background-color: #ffffff;
+}
+
+.styled-table tbody tr:nth-child(even) {
+  background-color: #f2f5f7;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #e9eef3;
+}
+
+/* Cores para as classes */
+.styled-table .aula {
+  background-color: #a8e6cf;
+  color: #1b5e20;
+}
+
+.styled-table .hae {
+  background-color: #d3e5ff;
+  color: #0d47a1;
+}
+
+.styled-table .reposicao {
+  background-color: #ffcccb;
+  color: #e65100;
+}
+
+/* Legenda das cores */
+.legenda-cores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.legenda-cores div {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.legenda-cores span {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+}
+
+.legenda-cores p {
+  font-size: 13px;
+  color: #555;
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+
+  margin: 10px;
+  background-color: #db3434;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  text-align: center;
+  transition: all 0.3s ease;
+}
+/* Botões maiores com ajuste para conteúdo */
+.btn,
+.btn-voltar {
+/* Espaçamento interno maior */
+  font-size: 18px; /* Tamanho da fonte maior */
+  border-radius: 8px; /* Bordas arredondadas */
+  min-width: 150px; /* Largura mínima para evitar que o botão fique pequeno */
+  white-space: nowrap; /* Impede quebra de texto */
+  display: inline-block; /* Garante que o botão não "estique" */
+  text-align: center; /* Centraliza o texto */
+  transition: transform 0.2s, background-color 0.3s; /* Transições suaves */
+}
+
+/* Hover nos botões */
+.btn:hover,
+.btn-voltar:hover {
+  background-color: #990000; /* Cor mais escura no hover */
+  transform: scale(1.1); /* Leve aumento no hover */
+}
+
+/* Ajuste para botões em telas menores */
+@media (max-width: 768px) {
+  .btn,
+  .btn-voltar {
+    padding: 12px 20px; /* Reduz o padding para dispositivos menores */
+    font-size: 16px; /* Fonte um pouco menor */
+    min-width: 120px; /* Ajusta a largura mínima */
+  }
+}
+
+.btn:hover {
+  background-color: #b92929;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+/* Botões de ação */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* Formulário de Indeferimento */
+#reasonForm {
+  max-width: 600px;
+  margin: 20px auto 0;
+  display: none;
+}
+
+#reasonForm label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+#reasonForm textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  min-height: 80px;
+  font-family: "Montserrat", sans-serif;
+}
+
+#reasonForm .btn {
+  margin-top: 10px;
+  background-color: #e74c3c;
+}
+
+#reasonForm .btn:hover {
+  background-color: #c0392b;
+}
+
+/* Centralizar o título do fieldset */
+.styled-fieldset legend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px; /* Espaçamento abaixo do legend */
+}
+
+.styled-fieldset legend h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0; /* Remove margens padrão */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    padding: 10px;
+  }
+
+  .action-buttons .btn {
+    /* Removido width: 100%; */
+    margin: 5px 0;
+  }
+}
+/* Modal */
+#pdfModal {
+  display: none;
+  position: fixed;
+  z-index: 1050;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; /* O modal ocupa toda a altura da tela */
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Conteúdo do Modal */
+.modal-content {
+  position: relative;
+  width: 90%;
+  height: 95%; /* Aumenta a altura para 95% */
+  margin: auto;
+  top: 2.5%; /* Centraliza verticalmente */
+  background-color: #fff;
+  padding: 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Botão Fechar */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #000;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Animação do Modal */
+#pdfModal.show {
+  display: block;
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.bem-vindo-nome {
+  margin: 0 10px; /* Espaçamento entre os elementos */
+  font-size: 16px; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito para destaque */
+  color: #333; /* Cor do texto */
+  text-transform: capitalize; /* Primeira letra maiúscula */
+  font-family: Arial, sans-serif; /* Fonte padrão */
+  display: inline-block; /* Mantém na mesma linha que os outros elementos */
+  vertical-align: middle; /* Alinha verticalmente com os outros elementos */
+  text-align: center; /* Centraliza o texto dentro do elemento */
+}
+
+/* Botão de Voltar */
+.btn-voltar {
+  display: inline-block;
+  background-color: #ff0011; /* Cor de fundo vermelho */
+  color: white; /* Cor do texto */
+  padding: 10px 20px; /* Espaçamento interno */
+  font-size: 16px; /* Tamanho da fonte */
+  text-align: center; /* Centralizar o texto */
+  text-decoration: none; /* Remover sublinhado */
+  border-radius: 5px; /* Bordas arredondadas */
+  border: none; /* Remover borda */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adicionar sombra */
+  transition: background-color 0.3s, transform 0.2s; /* Transições suaves para hover */
+  cursor: pointer; /* Alterar o cursor ao passar o mouse */
+}
+
+.btn-voltar:hover {
+  background-color: #b30000; /* Cor mais escura no hover */
+  transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+/* Hover em linhas das tabelas */
+.styled-table tbody tr:hover {
+  background-color: #f9e6e6; /* Fundo com tom mais claro */
+  cursor: pointer; /* Indica que a linha é interativa */
+}
+
+/* Hover em células das tabelas */
+.styled-table tbody tr td:hover {
+  background-color: #fcdede; /* Fundo mais escuro para destaque */
+  color: #b30000; /* Texto com tom vermelho */
+  transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+
+.status.proposta-enviada {
+  background-color: #000000; 
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.motivo-indeferimento {
+  font-size: 1.2rem;
+  color: #dc3545;
+  margin-top: 10px;
+  border-left: 4px solid #dc3545;
+  padding-left: 10px;
+}
+
+/* Ações e Status */
+.status {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 3px;
+  display: inline-block;
+  text-align: center;
+}
+
+.status.deferido {
+  background-color: #28a745;
+  color: white;
+  text-align: center;
+}
+
+.status.indeferido {
+  background-color: #dc3545;
+  color: white;
+  text-align: center;
+font-size: 1rem;
+}
